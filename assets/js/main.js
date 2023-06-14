@@ -287,3 +287,63 @@
   new PureCounter();
 
 })()
+
+/* Whatsapp */
+
+
+  const wa = document.createElement("section");
+  wa.id = "whatsapp";
+  
+  const link = document.createElement("a");
+  link.href = "https://wa.me/+59892008288?text=Necesito%20de%20sus%20servicios";
+  link.classList.add("float");
+  link.target = "_blank";
+  
+  const icon = document.createElement("i");
+  icon.classList.add("bi", "bi-whatsapp", "my-float");
+  
+  link.appendChild(icon);
+  wa.appendChild(link);
+  
+  document.head.innerHTML += `
+    <style type="text/css">
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+      #whatsapp {
+        display: block;
+      }
+      .float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 60px;
+        right: 40px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 38px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .my-float {
+        margin-top: 0px;        
+      }
+
+      .my-float:hover{
+        color: white;
+      }
+    </style>
+  `;
+  
+  let time = new Date();
+  let hours = time.getUTCHours();
+  let day = time.getUTCDay();
+  
+  if (day != 6 && day != 0) {
+    if (hours >= 0 && hours <= 24) {
+      document.body.appendChild(wa);
+    }
+  }
