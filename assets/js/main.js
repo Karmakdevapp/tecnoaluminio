@@ -180,24 +180,6 @@
     selector: '.glightbox'
   });
 
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function (direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
-
   /* Clients Slider*/
   new Swiper('.clients-slider', {
     speed: 400,
@@ -226,36 +208,7 @@
       }
     }
   });
-    /**
-     * Porfolio isotope and filter
-     */
-    window.addEventListener('load', () => {
-      let portfolioContainer = select('.portfolio-container');
-      if (portfolioContainer) {
-        let portfolioIsotope = new Isotope(portfolioContainer, {
-          itemSelector: '.portfolio-item'
-        });
-
-        let portfolioFilters = select('#portfolio-flters li', true);
-
-        on('click', '#portfolio-flters li', function (e) {
-          e.preventDefault();
-          portfolioFilters.forEach(function (el) {
-            el.classList.remove('filter-active');
-          });
-          this.classList.add('filter-active');
-
-          portfolioIsotope.arrange({
-            filter: this.getAttribute('data-filter')
-          });
-          portfolioIsotope.on('arrangeComplete', function () {
-            AOS.refresh()
-          });
-        }, true);
-      }
-
-    });
-
+    
     /**
      * Initiate portfolio lightbox 
      */
@@ -279,6 +232,46 @@
         clickable: true
       }
     });
+
+
+    /**
+   * Projects
+   */
+  window.addEventListener('load', () => {
+    let projectsContainer = select('.projects-container');
+    if (projectsContainer) {
+      let projectsIsotope = new Isotope(projectsContainer, {
+        itemSelector: '.projects-item'
+      });
+
+      let projectsFilters = select('#projects-flters li', true);
+
+      on('click', '#projects-flters li', function(e) {
+        e.preventDefault();
+        projectsFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        projectsIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        projectsIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
+
+  /**
+   * Initiate projects lightbox 
+   */
+  const projectsLightbox = GLightbox({
+    selector: '.projects-lightbox'
+  });
+
+
 
     /**
      * Animation on scroll
