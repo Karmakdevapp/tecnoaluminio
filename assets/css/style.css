@@ -460,13 +460,15 @@ h6 {
 --------------------------------------------------------------*/
 
 
- #hero {
- position: relative;
-  height: 100vh; /* Ajusta esto según tus necesidades */
-  overflow: hidden;
+#hero {
+  width: 100%;
+  height: 75vh;
+  background: url("../img/hero-bg2.jpg") top left;
+  background-size: cover;
+  position: relative;
 }
 
-#video {
+/* #video {
   position: absolute;
   top: 0;
   left: 0;
@@ -474,7 +476,7 @@ h6 {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
+} 
  
 @media (max-width: 750px) {
   #tecnoaluminio_hero {
@@ -487,7 +489,7 @@ h6 {
     background-size: cover;
     position: relative;
   }
-}
+}*/
 
 #hero:before {
   content: "";
@@ -1001,7 +1003,7 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 
-.cerramientos, .cerramientotradicional, .aberturasaluminio, .aberturaspvc, .tabiques, .techos{
+.cerramientos, .cerramientotradicional, .aberturasaluminio, .aberturaspvc, .balcones, .techos{
   display: none;
 }
 
