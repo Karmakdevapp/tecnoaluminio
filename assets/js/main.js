@@ -324,7 +324,7 @@
   wa.id = "whatsapp";
 
   const link = document.createElement("a");
-  link.href = "https://wa.me/+59899123456?text=Necesito%20de%20sus%20servicios";
+  link.href = "https://wa.me/+59894022519?text=Necesito%20de%20sus%20servicios";
   link.classList.add("float");
   link.target = "_blank";
 
