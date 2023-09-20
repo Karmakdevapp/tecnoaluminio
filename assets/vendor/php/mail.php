@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer;
 use PHPMailer\Exception;
 
-require './PHPMailer/Exception';
-require './PHPMailer/PHPMailer.php';
-require './PHPMailer/SMTP.php';
+require './PHPMailer/Exception.php';
+require __DIR__ . '/PHPMailer/PHPMailer.php';
+require __DIR__ . '/PHPMailer/SMTP.php';
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
