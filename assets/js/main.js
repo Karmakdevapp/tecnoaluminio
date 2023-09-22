@@ -398,3 +398,22 @@
     };
   
   }());
+
+ /*  //captcha
+  // Validar el captcha
+  document.querySelector("form").addEventListener("submit", function(e) {
+    // Obtenga el token del captcha del formulario
+    const token = e.target.querySelector("[name='h-captcha-response']").value;
+
+    // Verifique el token con hCaptcha
+    const response = new hCaptcha(document.querySelector(".h-captcha")).verify();
+
+    // Si el captcha es válido, envíe el formulario
+    if (response.success) {
+      // Envíe el formulario
+    } else {
+      // Mostrar un error
+      e.preventDefault();
+      alert("El captcha no es válido.");
+    }
+  }); */
