@@ -25,14 +25,14 @@ class PHP_Email_Form {
   public $recaptcha_secret_key = false;
 
   public $error_msg = array(
-    'invalid_to_email' => 'Email to (receiving email address) is empty or invalid!',
-    'invalid_from_name' => 'From Name is empty!',
-    'invalid_from_email' => 'Email from: is empty or invalid!',
-    'invalid_subject' => 'Subject is too short or empty!',
-    'short' => 'is too short or empty!',
-    'ajax_error' => 'Sorry, the request should be an Ajax POST',
-    'invalid_attachment_extension' => 'File extension not allowed, please choose:',
-    'invalid_attachment_size' => 'Max allowed attachment size is:'
+    'invalid_to_email' => 'El correo electrónico del destinatario está vacío o es inválido.',
+    'invalid_from_name' => 'El nombre del remitente está vacío.',
+    'invalid_from_email' => 'El correo electrónico del remitente está vacío o es inválido.',
+    'invalid_subject' => 'El asunto es demasiado corto o está vacío.',
+    'short' => 'es demasiado corto o está vacío.',
+    'ajax_error' => 'Lo siento, la solicitud debe ser una POST de Ajax.',
+    'invalid_attachment_extension' => 'Extensión de archivo no permitida, por favor elija:',
+    'invalid_attachment_size' => 'El tamaño máximo permitido para el archivo adjunto es:'
   );
 
   private $error = false;
